@@ -1,0 +1,31 @@
+.make-mork-meaningful {
+  &__inner {
+    margin-bottom: 125px;
+    text-align: center;
+  }
+
+  &__heading {
+    margin-bottom: 23px;
+    font-size: 34px;
+    line-height: 36px;
+  }
+
+  &__subtitle {
+    margin: 0px auto 79px;
+    max-width: 789px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.8px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__item:nth-last-child(n+7) {
+    margin-bottom: 28px;
+  }
+}
+

@@ -1,0 +1,52 @@
+.we-hope-you-join {
+  &__inner {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  &__heading {
+    margin-bottom: 44px;
+    font-size: 34px;
+    line-height: 36px;
+  }
+
+  &__link-more{
+    display: block;
+    margin-bottom: 121px;
+    line-height: 21px;
+    letter-spacing: 1.4px;
+  }
+
+  &__design {
+    width: 100%;
+    min-height: 404px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 120px;
+    background-color: #9AA8B1;
+    color: var(--color-white);
+  }
+}
+
+.new-design {
+
+  &__logo {
+    width: 40px;
+    height: 34px;
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    margin-bottom: 23px;
+    font-size: 43px;
+    line-height: 58px;
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.8px;
+  }
+}
+

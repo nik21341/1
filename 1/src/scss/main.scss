@@ -1,0 +1,17 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/header";
+@import "./components/hero";
+@import "./components/designInspires";
+@import "./components/featuredProducts";
+@import "./components/homeOfficeInspiration";
+@import "./components/madeTheHardWay";
+@import "./components/makeWorkMeaningful";
+@import "./components/weHopeYouJoinUs";
+@import "./components/footer";
+

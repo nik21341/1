@@ -1,0 +1,57 @@
+.design-inspires {
+
+  &__inner {
+    margin-bottom: 130px;
+    text-align: center;
+  }
+
+  &__heading {
+    margin-bottom: 23px;
+    font-size: 43px;
+    line-height: 58px;
+  }
+
+  &__subtitle {
+    margin-bottom: 26px;
+    color: #A0A0A0;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.8px;
+  }
+
+  &__link-get-started {
+    display: block;
+    margin-bottom: 80px;
+    line-height: 21px;
+    letter-spacing: 1.4px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
+
+.designs {
+
+  &__img {
+    max-width: 658px;
+    margin-bottom: 48px;
+  }
+
+  &__title {
+    margin-bottom: 23px;
+    font-size: 27px;
+    line-height: 30px;
+  }
+
+  &__link-more {
+    line-height: 15.23px;
+    letter-spacing: 1.4px;
+  }
+}
+
+
+
+

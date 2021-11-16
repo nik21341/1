@@ -1,0 +1,27 @@
+.made-the-hard-way {
+
+  &__inner{
+    margin-bottom: 38px;
+    text-align: center;
+  }
+
+  &__heding {
+    margin-bottom: 23px;
+    font-size: 34px;
+    line-height: 36px;
+  }
+
+  &__subtitle {
+    max-width: 777px;
+    margin: 0px auto 23px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.8px;
+    color: #A0A0A0;
+  }
+
+  &__img {
+    max-width: 1052px;
+  }
+}
+

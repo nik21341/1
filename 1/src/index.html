@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preload" href="fonts/Roboto-Regular.woff2" as="font" crossorigin="anonymous">
+  <title>New site</title>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/vendor.js"></script>
+  <script defer src="js/main.js"></script>
+</head>
+
+<body>
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      @include('partials/hero.html')
+      @include('partials/designInspires.html')
+      @include('partials/featuredProducts.html')
+      @include('partials/homeOfficeInspiration.html')
+      @include('partials/madeTheHardWay.html')
+      @include('partials/makeWorkMeaningful.html')
+      @include('partials/weHopeYouJoinUs.html')
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+.header {
+  &__inner{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav {
+
+}
+&__logo {
+
+}
+
+&__login {
+  padding-right: 30px;
+}
+}
+
+.nav {
+ &__list {
+   display: flex;
+}
+
+&__item {
+}
+
+&__item:not(:last-child) {
+  margin-right: 24px;
+}
+
+&__link {
+}
+}
+
+.logo {
+  &__icon{
+
+  }
+}
+
+.login {
+&__link {
+  font-size: 14px;
+}
+}
+
