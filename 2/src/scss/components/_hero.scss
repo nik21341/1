@@ -1,0 +1,188 @@
+.hero {
+
+  &__inner {
+    min-height: 620px;
+    margin-bottom: 102px;
+
+    @media (max-width: 1215px){
+      min-height: 668px;
+      margin-bottom: 62px;
+    }
+
+    @include mobile{
+      position: relative;
+      min-height: 700px;
+      margin-bottom: 140px;
+    }
+
+    @media (max-width: 768px) and (min-width: 670px){
+        padding: 0;
+    }
+
+    @media (max-width: 670px){
+      margin-bottom: 40px;
+      min-height: 308px;
+    }
+  }
+
+  &__banner {
+    position: absolute;
+    top: 108px;
+    left: 80px;
+    z-index: 2;
+    max-width: 850px;
+
+    @media (max-width: 1215px){
+      top: 0;
+      left: 0;
+      max-width: 85%;
+      padding: 90px 0px 15px 45px;
+      }
+
+    @include mobile{
+      top: 0;
+      left: 0;
+      max-width: 100%;
+      padding: 150px 0px 0 49px;
+      }
+
+    @media (max-width: 670px){
+      top: 0;
+      left: 0;
+      padding: 32px 21px 40px 22px;
+      text-align: center;
+      }
+  }
+
+  &__pagination{
+    bottom: 5%;
+    left: 47.7%;
+    display: flex;
+  }
+
+  &__pagination-dot{
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 40%;
+
+    @media (max-width: 670px){
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  &__pagination-dot:not(:last-child){
+    margin-right: 20px;
+  }
+
+  &__pagination-dot--active{
+    background-color: white;
+    opacity: 1;
+  }
+
+  &__swiper{
+    min-height: inherit;
+  }
+
+  &__slides{
+    min-height: inherit;
+  }
+
+  &__slide{
+    min-height: inherit;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__slide--1{
+    background-image: url('../img/hero/low_angle_photo_of_balconies.jpg');
+  }
+
+  &__slide--2{
+    background-image: url('../img/hero/apartment_apartment_building_architecture_building.jpg');
+  }
+
+  &__slide--3{
+    background-image: url('../img/hero/brown_and_blue_glass_building.jpg');
+  }
+
+}
+
+.banner {
+
+  &__heading {
+    margin-bottom: 18px;
+    font-weight: 800;
+    font-size: 70.3742px;
+    line-height: 86px;
+    color: var(--color-white);
+
+    @media (max-width: 1215px){
+      margin-bottom: 7px;
+      font-size: 60px;
+      line-height: 73px;
+    }
+
+    @include mobile{
+      font-size: 50px;
+    }
+
+    @media (max-width: 670px){
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &__text {
+    font-weight: 700;
+    font-size: 23.4581px;
+    line-height: 29px;
+    color: var(--color-white);
+    margin-bottom: 95px;
+
+    @media (max-width: 1215px){
+      margin-bottom: 110px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    @media (max-width: 670px){
+      margin-bottom: 34px;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    padding: 25.83px 39.59px;
+    background: var(--color-orange);
+    border: 0;
+    font-weight: 700;
+    font-size: 23.4581px;
+    line-height: 29px;
+    color: var(--color-white);
+
+    @media (max-width: 1215px){
+      font-size: 24px;
+      line-height: 30px;
+      padding: 25px 38px;
+    }
+
+    @media (max-width: 670px){
+      padding: 12px 28px;
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+}
+
+
+
+
+

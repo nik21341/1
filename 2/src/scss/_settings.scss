@@ -1,0 +1,133 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+button,
+input{
+  font: inherit;
+}
+
+a:active{
+  border:0;
+  outline: none;
+}
+
+button{
+  cursor: pointer;
+}
+
+*:focus{
+  outline: none;
+  box-shadow: 0 0 0 2px #FF9900;
+}
+
+h1, h2, h3, p {
+  padding: 0;
+  margin: 0;
+}
+
+picture {
+  display: block;
+  height: auto;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.body{
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  color: var(--color-black);
+  background: #E5E5E5;
+}
+
+.site-container {
+  overflow: hidden;
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.button{
+
+  &:hover{
+    background: rgba(255, 153, 0, 0.7);
+  }
+
+  &:focus{
+    box-shadow: none;
+    background: rgba(255, 153, 0, 0.7);
+  }
+
+  &:active{
+    background: var(--color-active);
+  }
+}
+
+
+
+
+.container {
+  position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 75px;
+
+  @media (max-width: 1215px){
+    &{
+      padding: 0 50px;
+    }
+  }
+
+  @media (max-width: 600px){
+    &{
+      padding: 0 15px;
+    }
+  }
+}
+
+.visually-hidden{
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0 !important;
+  border:0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
