@@ -1,0 +1,15 @@
+.date{
+    display: flex;
+    align-items: center;
+    color: #999999;
+
+    &__text{
+        font-size: 12px;
+        transform: translateY(2px);
+    }
+
+    &__icon{
+        margin-right: 2px;
+    }
+
+}

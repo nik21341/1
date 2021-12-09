@@ -1,0 +1,26 @@
+.btn{
+    padding: 13px 19px;
+    color: var(--color-white);
+    background-color: #FF6E30;
+    font-weight: 700;
+    border: 3px solid #FF6E30;
+
+    &:hover{
+        background-color: var(--color-focus);
+        border: solid var(--color-focus);
+    }
+
+    &:focus{
+        border: 3px solid var(--color-focus);
+    }
+
+    &:active{
+        background-color: var(--color-active);
+        border: solid var(--color-active);
+    }
+
+    @include mobile{
+        padding: 9px 19px;
+        font-size: 14px; 
+    }
+}

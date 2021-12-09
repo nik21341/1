@@ -1,0 +1,80 @@
+.retouching{
+
+    &__item{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+
+        @include desktop{
+             min-height: 234px;
+            grid-column: 3 span;
+            gap: 0;
+        }
+
+        @include tablet{
+            grid-template-rows: 1fr;
+            row-gap: 13px;
+        }
+
+        @include mobile{
+            grid-column: 1 span;
+        }
+
+        @media (max-width:(600px)){
+            min-height: auto;
+            column-gap: 30px;
+            grid-column: 2 span;
+        }
+    }
+
+    &__photo{
+        grid-column: 2 span;
+
+        @include desktop{
+            grid-column: 4 span;
+        }
+
+        @media (max-width:(600px)){
+            grid-column: 2 span;
+        }
+
+        @media (max-width:(430px)){
+            grid-column: 4 span;
+        }
+
+    }
+
+    &__inner{
+        align-self: center;
+        grid-column: 2 span;
+
+        @include desktop{
+            grid-column: 4 span;
+        }
+
+        @media (max-width:(600px)){
+            grid-column: 2 span;
+        }
+
+        @media (max-width:(430px)){
+            grid-column: 4 span;
+        }
+    }
+
+    &__title{
+        margin-bottom: 10px;
+        color: #202020;
+        font-size: 24px;
+        line-height: 24px;
+        
+        font-weight: 400;
+        
+
+        @include desktop{
+            max-height: 48px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+       }
+    }
+
+}

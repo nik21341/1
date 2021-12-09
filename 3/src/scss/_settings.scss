@@ -1,0 +1,178 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+*:focus{
+  outline: none;
+}
+
+article,
+aside{
+  box-sizing: border-box;
+}
+
+picture {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: var(--color-white);
+
+  @include mobile{
+    font-size: 14px;
+  }
+}
+
+h1, h2, h3{
+  padding: 0;
+  margin: 0;
+  font-family: "TTFirsNeue", sans-serif;
+}
+
+p{
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+
+a:active{
+  border:0;
+  outline: none;
+  }
+
+input, textarea{
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+}
+
+.site-container {
+  overflow: hidden;
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+.for-mobile {
+  display: none;
+
+  @include mobile {
+    display: block;
+  }
+}
+
+.error {
+  border: 2px #ff4019 solid !important;
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1320px;
+
+  @include desktop{
+    padding: 0 30px;
+  }
+
+  @include tablet {
+    padding: 0 27px;
+  }
+
+  @media (max-width:(1250px)) and (min-width:(1020px)) {
+    padding: 0 30px;
+  }
+
+
+  @include mobile {
+    padding: 0 21px;
+  }
+}
+
+.scroll-off{
+  overflow: hidden;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+
+  @include desktop{
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  @include tablet {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  @include mobile {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.title{
+
+  @include mobile{
+    font-size: 18px;
+    line-height: 23.22px;
+  }
+
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.js-validate-error-label{
+  position: absolute;
+  top: 3px;
+  left: 23px;
+  font-size: 9px;
+}
+

@@ -1,0 +1,41 @@
+.projects-pagination{
+
+    &__btn{
+        width: 30px;
+        height: 30px;
+        background-color: #C4C4C4;
+
+        @include mobile{
+            width: 24px;
+            height: 24px;
+            font-size: 12px;
+        }
+    }
+
+    &__btn--active{
+        color: var(--color-white);
+        background-color: #FF6E30;
+    }
+
+    &__btn:first-child{
+        grid-column: 6/7;
+        justify-self: end;
+
+        @include desktop{
+            grid-column: 4/5;
+        }
+        @include tablet{
+            grid-column: none;
+            margin-right: 10px;
+        }
+    }
+
+    &__btn:not(&__btn--active):hover{
+        background-color: #E9E9E9;
+        color: #FF6E30;
+    }
+
+    &__btn:not(&__btn--active):focus{
+        background-color: #FFD4C1;
+    }
+}

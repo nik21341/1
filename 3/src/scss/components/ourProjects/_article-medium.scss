@@ -1,0 +1,10 @@
+.article-medium{
+
+    .article__desc{
+        padding: 0;
+    }
+
+    @include mobile{
+        min-height: 295px;
+    }
+}

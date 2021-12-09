@@ -1,0 +1,325 @@
+.projects{
+
+    &__container{
+        min-height: 750px;
+        margin-bottom: 41px;
+        padding-top: 41px;
+
+        @include mobile{
+            padding-top: 32px;
+            margin-bottom: 29px;
+        }
+    }
+
+    &__title{
+        margin-bottom: 14px;
+        color: #202020;
+        font-size: 24px;
+        font-weight: 700;
+
+        @include mobile{
+            margin-bottom: 16px;
+        }
+    }
+
+    &__article{
+        position: relative;
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .article-large--1,
+    .article-large--2{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__swiper{
+        margin-bottom: 50px;
+
+        @include desktop{
+        }
+
+        @include mobile{
+            margin-bottom: 29px;
+        }
+    }
+
+    &__slide1{
+
+
+        .article-tiny--1{
+         grid-area: tuny1;
+        } 
+    
+        .article-tiny--2{
+            grid-area: tuny2;
+        }
+    
+        .article-tiny--3{
+            grid-area: tuny3;
+        }
+
+        .article-tiny--4{
+            display: none;
+        }
+
+    
+        .article-large--1{
+            grid-area: large1;
+            background-image: url('../img/projects/large1.jpg');
+
+            @include desktop{
+                background-image: url('../img/projects/desktop/large1.jpg');
+            }
+
+            @include tablet{
+                background-image: url('../img/projects/tablet/large1.jpg');
+            }
+
+            @media (max-width:(400px)){
+                .article-large__hashtag{
+                    font-size: 14px;
+                }
+                
+                .article-large__inner{
+                    margin-bottom: 25px;
+                }
+
+                background-image: url('../img/projects/mobile/large1.jpg');
+            }
+        }
+    
+        .article-large--2{
+            grid-area: large2;
+            background-image: url('../img/projects/large2.jpg');
+
+            @include desktop{
+                background-image: url('../img/projects/desktop/large2.jpg');
+            }
+
+            @include tablet{
+                background-image: url('../img/projects/tablet/large2.jpg');
+            }
+
+            @media (max-width:(400px)){
+                background-image: url('../img/projects/mobile/large2.jpg');
+            }
+        }
+    
+        .article-medium--1{
+            grid-area: medium1;
+        }
+    
+        .article-medium--2{
+            grid-area: medium2;
+        }
+    
+        grid-template-areas: "tuny1 tuny1 tuny2 tuny2 tuny3 tuny3 large2 large2 large2 large2 large2 large2"
+                            "large1 large1 large1 large1 large1 large1  medium1 medium1 medium1 medium2 medium2 medium2";                      
+    
+    
+        @include desktop{
+
+            .article-tiny--4{
+                display: flex;
+                grid-area: tuny4;
+            }
+
+            grid-template-areas: 
+                                 "tuny1 tuny1 tuny2 tuny2 tuny3 tuny3 tuny4 tuny4"
+                                 "large2 large2 large2 large2 large2 medium1  medium1 medium1"
+                                "medium2 medium2 medium2 large1 large1 large1 large1 large1";
+
+        }
+
+        @include tablet{
+            
+            .article-tiny--4{
+                display: none;
+                grid-area: tuny4;
+            }
+            
+            grid-template-areas: 
+            "tuny1 tuny1 tuny2 tuny2 tuny3 tuny3"
+            "large2 large2 large2 large2 large2 large2"
+            "medium1 medium1 medium1 medium2 medium2 medium2"
+            "large1 large1 large1 large1 large1 large1";
+        }
+
+        @include mobile{
+            grid-template-areas: 
+            "tuny1 tuny2"
+            "tuny3 medium1"
+            "large2 large2"
+            "medium2 ."
+            "large1 large1";
+        }
+        
+        @media (max-width:(400px)){
+            grid-template-areas: 
+            "tuny1 tuny1"
+            "tuny2 tuny2"
+            "tuny3 tuny3"
+            "large2 large2"
+            "medium1 medium1"
+            "medium2 medium2"
+            "large1 large1";
+        }
+
+    }
+
+
+    &__slide2{
+
+
+        .article-tiny--1{
+         grid-area: tuny1;
+        } 
+    
+        .article-tiny--2{
+            grid-area: tuny2;
+        }
+    
+        .article-tiny--3{
+            grid-area: tuny3;
+        }
+    
+        .article-large--1{
+            grid-area: large1;
+            background-image: url('../img/projects/large3.jpg');
+
+            @include desktop{
+                background-image: url('../img/projects/desktop/large3.jpg');
+            }
+
+            @include tablet{
+                background-image: url('../img/projects/tablet/large3.jpg');
+            }
+
+            @media (max-width:(400px)){
+                background-image: url('../img/projects/mobile/large3.jpg');
+            }
+        }
+    
+        .article-large--2{
+            grid-area: large2;
+            background-image: url('../img/projects/large4.jpg');
+
+            @include desktop{
+                background-image: url('../img/projects/desktop/large4.jpg');
+            }
+
+            @include tablet{
+                background-image: url('../img/projects/tablet/large4.jpg');
+            }
+
+            @media (max-width:(400px)){
+
+                .article-large__hashtag{
+                    font-size: 14px;
+                }
+
+                .article-large__inner{
+                    margin-bottom: 25px;
+                }
+                background-image: url('../img/projects/mobile/large4.jpg');
+            }
+
+
+        }
+    
+        .article-medium--1{
+            grid-area: medium1;
+        }
+    
+        .article-medium--2{
+            grid-area: medium2;
+            
+        }
+    
+        grid-template-areas: "large1 large1 large1 large1 large1 large1 medium1 medium1 medium1 medium2 medium2 medium2"
+        "tuny1 tuny1 tuny2 tuny2 tuny3 tuny3 large2 large2 large2 large2 large2 large2";                      
+    
+
+        @include desktop{
+
+            .article-tiny--3{
+                display: none;
+            }
+
+            grid-template-areas: 
+                             "large1 large1 large1 large1 large1 medium1  medium1 medium1"
+                             "medium2 medium2 medium2 large2 large2 large2 large2 large2"
+                             "tuny1 tuny1 tuny2 tuny2 tiny3 tiny3 . .";
+
+        }
+
+        @include tablet{
+
+            .article-tiny--3{
+                display: flex;
+            }
+
+            grid-template-areas: 
+                                 "tuny1 tuny1 tuny2 tuny2 tuny3 tuny3"
+                                 "large2 large2 large2 large2 large2 large2"
+                                 "medium1 medium1 medium1 medium2 medium2 medium2"
+                                 "large1 large1 large1 large1 large1 large1";
+        }
+
+        @include mobile{
+            grid-template-areas: 
+            "tuny1 tuny2"
+            "tuny3 medium1"
+            "large2 large2"
+            "medium2 ."
+            "large1 large1";
+        }
+        
+        @media (max-width:(400px)){
+            grid-template-areas: 
+            "tuny1 tuny1"
+            "tuny2 tuny2"
+            "tuny3 tuny3"
+            "large1 large1"
+            "medium1 medium1"
+            "medium2 medium2"
+            "large2 large2";
+        }
+
+    }
+
+    &__pagination{
+        text-align: center;
+
+        @include tablet{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        @include mobile{
+            position: absolute;
+            top: 31px;
+            right: 21px;
+            z-index: 999;
+            gap: 0;
+        }
+    }
+}
+
+@import "article";
+@import "article-tiny";
+@import "article-large";
+@import "article-medium";
+@import "projects-pagination";
+
+
+
+
+
+
+

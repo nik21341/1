@@ -1,0 +1,8 @@
+.time{
+    display: flex;
+    align-items: center;
+    &__text{
+        font-size: 12px;
+        transform: translateY(2px);
+    }
+}

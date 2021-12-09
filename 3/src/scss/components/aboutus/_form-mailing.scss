@@ -1,0 +1,52 @@
+.form-mailing{
+
+    &__input{
+        width: 100%;
+        padding: 15px 23px;
+        background-color: #4A4A4A;
+        color: #CACACA;
+        border: 1px solid #4A4A4A;
+        margin-right: 30px;
+
+        @include desktop{
+            max-width: 342px;
+            margin-bottom: 20px;
+        }
+
+        @include mobile {
+            padding: 11px 22px;
+        }
+    }
+
+    &__input::placeholder{
+        color: #CACACA;
+        font-size: 14px;
+    }
+
+    &__input:hover::placeholder{
+        color: var(--color-hover);
+    }
+
+    &__input:focus,
+    &__input:active{
+        outline: none ;
+        border: 1px solid var(--color-focus);
+    }
+
+
+    .js-validate-error-label{
+        color: #F06666 !important;
+    }
+
+    .js-validate-error-field{
+        border: 1px solid #F06666 !important;
+        color: var(--color-white) !important;
+    }
+
+    &__btn{
+
+        @include desktop{
+            width: fit-content;
+          }
+    }
+}

@@ -1,0 +1,186 @@
+.header {
+
+  &__container{
+    min-height: inherit;
+    align-items: center;
+  }
+
+  &__top {
+    position: relative;
+    min-height: 80px;
+    background-color: #202020;
+
+    @include mobile{
+      min-height: 70px;
+    }
+  }
+  
+  &__bottom {
+    min-height: 45px;
+    margin-bottom: 40px;
+    background-color: #4A4A4A;
+
+  }
+
+  &__logo{
+    grid-column: 2 span;
+    img{
+      margin: 0;
+    }
+
+    @include desktop{
+      transform: translateY(2px);
+    }
+
+    @include mobile{
+      grid-column: 1 span;
+      transform: translateY(0px);
+    }
+  }
+
+  &__nav {
+    grid-column: 4/11;
+
+    @include desktop {
+      position: absolute;
+      top: 30px;
+      left: 249px;
+      grid-column: none;
+    }
+
+    @include tablet {
+      width: 100%;
+      top: 93px;
+      left: 0;
+      padding: 0 27px;
+    }
+
+    @include mobile{
+      position: absolute;
+      top: 115px;
+      left: 0;
+      z-index: 999;
+      display: block;
+      height: 100vh;
+      padding: 30px 27px;
+      background-color: #4A4A4A;
+      transition: transform 0.2s ease-in-out;
+      transform: translateX(-101%);
+    }
+  }
+
+  &__burger{
+    display: none;
+
+    @include mobile{
+      display: block;
+    }
+  }
+
+  &__social{
+    justify-self: end;
+    grid-column: 2 span;
+
+    @include desktop{
+      grid-column: 7/9;
+      transform: translate(-2px, 1px);
+    }
+
+    @media (max-width:(1023px)) {
+      display: none;
+    }
+  }
+
+  &__tel{
+    width: fit-content;
+    grid-column: 3 span;
+    transform: translateX(-3px);
+
+    
+    .tel__number{
+      font-family: "TTFirsNeue", sans-serif;
+      font-weight: 700;
+
+      @include mobile{
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+    
+    
+    .tel__icon{
+      color: var(--color-white);
+    }
+    
+    &:hover{
+      .tel__number,
+      .tel__icon{
+        opacity: 1;
+        color: var(--color-hover);
+      }
+    }
+    
+    &:focus{
+      background-color: var(--color-focus);
+      box-shadow: 0 0 0 3px var(--color-focus);
+    }
+    
+    &:active{
+      .tel__number,
+      .tel__icon{
+        opacity: 1;
+        color: var(--color-active);
+      }
+    }
+    @include desktop{
+      .tel__number,
+      .tel__icon{
+        color: var(--color-focus);
+      }
+    }
+
+    @media (max-width:(1023px)) {
+      position: absolute;
+      top: -51px;
+      right: 91px;
+    }
+
+    @include mobile{
+      top: 13px;
+      right: 18px;
+    }
+  }
+
+
+  &__form{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    grid-column: 11/13;
+    justify-self: end;
+    @include desktop{
+      grid-column: 7/9;
+      justify-self: start;
+      transform: translate(-4px, 1px);
+    }
+
+    @media (max-width:(1023px)) {
+      position: absolute;
+      top: -59px;
+      right: 14px;
+    }
+
+    @include mobile{
+      width: fit-content;
+      top: -50px;
+      right: 9px;
+    }  
+  }
+}
+
+@import "nav";
+@import "form-search";
+@import "burger"
+
+
+

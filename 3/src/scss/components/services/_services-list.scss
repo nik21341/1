@@ -1,0 +1,149 @@
+.services-list{
+
+    &__item{
+        display: grid;
+        min-height: 140px;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 30px;
+
+        @include desktop{
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+        @include tablet{
+            min-height: 322px;
+            grid-template: repeat(1, 1fr)  /  repeat(3, 1fr);
+            grid-column: 1 span;
+            row-gap: 16px;
+       }
+
+       @include mobile {
+           min-height: auto;
+           grid-column: 2 span;
+           grid-template: repeat(1, 1fr)  /  repeat(3, 1fr);
+           row-gap: 12px;
+
+           &:first-child{
+            .services-list__text{
+                max-height: 54px;
+            }
+        }
+
+        &:nth-child(3){
+            .services-list__text{
+                max-height: 54px;
+            }
+        }
+       }
+
+       @media (max-width:(600px)) {
+        grid-template: repeat(1, 1fr)  /  repeat(4, 1fr);
+       }
+
+       @media (max-width:(440px)) {
+           min-height: 311px;
+        grid-template: repeat(1, 1fr)  /  repeat(1, 1fr);
+       }
+    }
+
+    &__photo{
+        grid-column: 3 span;
+
+        @include desktop{
+            grid-column: 2 span;
+        }
+
+        @include tablet{
+            grid-column: 3 span;
+       }
+
+       @include mobile {
+        grid-column: 1 span;
+     }
+
+     @media (max-width:(600px)) {
+        grid-column: 2 span;
+       }
+
+       @media (max-width:(440px)) {
+        grid-column: 1 span;
+       }
+    }
+
+    &__inner{
+        grid-column: 5 span;
+        align-self: center;
+
+        @include desktop{
+            grid-column: 3 span;
+        }
+
+        @include tablet{
+            align-self:start;
+       }
+
+       @include mobile {
+        grid-column: 2 span;
+       }
+
+       @media (max-width:(600px)) {
+        grid-column: 2 span;
+       }
+
+       @media (max-width:(440px)) {
+        grid-column: 1 span;
+       }
+    }
+
+    &__title{
+        margin-bottom: 4px;
+        color: #202020;
+        font-family: "TTFirsNeue", sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 22px;
+
+        @include tablet{
+            width: 343px;
+            margin-bottom: 5px;
+       }
+
+        @include mobile{
+            width: 100%;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+    }
+
+    &__text{
+        position: relative;
+        margin-bottom: 15px;
+        color: #999999;
+        line-height: 22px;
+        max-height: 66px;
+        padding-right: 2px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+
+        @include desktop{
+            grid-column: 3 span;
+        }
+
+        @include tablet{
+            margin-bottom: 7px;
+        }
+
+        @include mobile{
+            margin-bottom: 10px;
+            font-size: 14px;
+            line-height: 18px;
+            max-height: 72px;
+        }
+    }
+
+    &__more{
+        @include mobile{
+            font-size: 14px;
+        }
+    }
+}

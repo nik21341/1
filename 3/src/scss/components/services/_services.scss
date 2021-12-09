@@ -1,0 +1,201 @@
+.services{
+    
+    &__container{
+        min-height: 903px;
+        margin-bottom: 38px;
+
+        @include desktop{
+            min-height: 1103px;
+       }
+
+       @include mobile{
+           margin-bottom: 50px;
+       }
+    }
+
+    .grid{
+        row-gap: 0;
+    }
+
+    &__pagination{
+        width: 410px;
+        min-height: 30px;
+        margin-bottom: 27px;
+        @include tablet{
+            width: 342px;
+        }
+
+        @include mobile{
+            width: 100%;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__list-left{
+        display: grid;
+        grid-column: 8 span;
+        grid-template-rows: repeat(5, 1fr);
+        row-gap: 25px;
+
+        @include desktop{
+            grid-column: 5 span;
+            row-gap: 20px;
+          }
+
+        @include tablet{
+            grid-column: 6 span;
+            grid-template: 1fr / repeat(2, 1fr);
+            gap: 23px 30px;
+            margin-bottom: 29px;
+        }
+
+        
+        @include mobile{
+            grid-template: 1fr / repeat(2, 1fr);
+            grid-column: 2 span;
+            margin-bottom: 23px;
+        }
+    }
+
+    &__heading{
+        margin-bottom: 17px;
+        color: #202020;
+        font-size: 24px;
+        font-weight: 700;
+
+        @include mobile{
+            margin-bottom: 10px;
+        }
+    }
+
+    &__swiper{
+        position: relative;
+    }
+
+    &__item-inner{
+        grid-column: 5 span;
+        padding-top: 16px;
+    }
+
+    &__retouching{
+        display: grid;
+        grid-column: 8 span;
+        grid-template: repeat(5, 1fr) / repeat(2, 1fr);
+        gap: 20px 30px;
+
+        @include desktop{
+            grid-column: 5 span;
+            grid-template: repeat(5, 1fr) / repeat(6, 1fr);
+          }
+
+        @include tablet{
+            grid-column: 6 span;
+            grid-template: repeat(5, 1fr) / repeat(6, 1fr);
+        }
+
+        @include mobile{
+          grid-column: 2 span;
+          grid-template: repeat(1, 1fr) / repeat(2, 1fr);
+        }
+    }
+
+    &__completedwork{
+        grid-column: 4 span;
+        align-self: end;
+
+        @include desktop{
+            grid-column: 3 span;
+          }
+
+        @include tablet{
+            grid-column: 6 span;
+          }
+
+        @include mobile{
+            grid-column: 2 span;
+          }
+    }
+
+    &__aside{
+        position: absolute;
+        top: 9px;
+        right: 15px;
+        width: 410px;
+        height: 490px;
+        z-index: 999;
+        padding:20px 30px 30px 30px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url('../img/services/abs/sale1.jpg');
+
+        @include desktop{
+            right: 31px;
+            width: 342px;
+            height: 490px;
+            background-image: url('../img/services/desktop/abs/sale1.jpg');
+        }
+
+        @include tablet{
+            position: static;
+            grid-column: 6 span;
+            width: 100%;
+            height: 336px;
+            background-size: cover;
+            background-position: center;
+            background-image: url('../img/services/tablet/abs/sale1.jpg');
+        }
+
+        @include mobile{
+          height: 422px;
+          grid-column: 2 span;
+          padding:21px 30px 27px 30px;
+        }
+        
+        @media (max-width:(640px)){
+            background-image: url('../img/services/mobile/abs/sale1.jpg');
+        }
+    }
+
+    &__aside--dekstop{
+        @include tablet{
+            display: none;
+        }
+    }
+
+    &__aside--tablet{
+        @media (min-width: (1024px)) {
+            display: none;
+        }
+
+        @include tablet{
+            margin-bottom: 21px;
+        }
+
+        @include mobile{
+            margin-bottom: 17px;
+        }
+    }
+}
+
+.swiper-button-disabled{
+    color: #FF6E30 !important;
+}
+
+.swiper-scrollbar-drag{
+    border-radius: 0;
+    background-color: #FF6E30 !important;
+}
+
+@import "services-list";
+@import "link-title";
+@import "link-more";
+@import "aside";
+@import "abs";
+@import "retouching";
+@import "pagination";
+@import "completedwork";
+
+
+
+
+

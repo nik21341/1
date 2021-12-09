@@ -1,0 +1,23 @@
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+@import "./components/blocks/tel";
+@import "./components/blocks/time";
+@import "./components/blocks/date";
+@import "./components/blocks/social";
+@import "./components/blocks/hashtag";
+@import "./components/blocks/btn";
+@import "./components/blocks/title";
+
+@import "./components/header/header";
+@import "./components/hero/hero";
+@import "./components/aboutus/aboutus";
+@import "./components/ourProjects/ourProjects";
+@import "./components/services/services";
+@import "./components/skill/skill";
+@import "./components/contacts/contacts";
+@import "./components/footer/footer";
+
+

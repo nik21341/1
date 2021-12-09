@@ -1,0 +1,15 @@
+.link-title{
+    display: inline-block;
+
+    &:hover{
+        color: var(--color-hover);
+    }
+
+    &:focus{
+        background-color: #FFD4C1;
+    }
+
+    &:active{
+        color: #CE4307;
+    }
+}

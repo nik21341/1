@@ -1,0 +1,122 @@
+.aboutus{
+
+    .grid{
+        @include mobile{
+            row-gap: 20px;
+        }
+    }
+
+    &__inner{
+        min-height: auto;
+        padding: 32px 0px 70px 0px;
+        background-color: #202020;
+
+        @include desktop{
+            padding: 32px 0px 144px 0px;
+        }
+
+        @include tablet{
+            padding: 32px 0px 62px 0px;
+        }
+
+        @include mobile{
+            padding: 32px 0px 61px 0px;
+        }
+    }
+
+    &__title{
+        margin-bottom: 4px;
+        color: var(--color-white);
+        font-size: 24px;
+        font-weight: 700;
+
+        @include mobile {
+            font-size: 18px;
+        }
+    }
+
+    &__text{
+        grid-column: 6 span;
+        padding-top: 3px;
+        color: #CACACA;
+        line-height: 28px;
+
+        @include desktop{
+            grid-column: 4 span;
+        }
+
+        @include tablet{
+            grid-column: 3 span;
+        }
+
+        
+        @include mobile {
+            grid-column: 1 span;
+            font-size: 14px;
+            line-height: 25px;
+        }
+
+        @media (max-width:(630px)) {
+            grid-column: 2 span;
+        }
+    }
+
+    &__mailing{
+        grid-column: 6 span;
+
+        @include desktop{
+            grid-column: 4 span;
+        }
+
+        @include tablet{
+            grid-column: 3 span;
+        }
+
+        @include mobile {
+            grid-column: 1 span;
+        }
+
+        @media (max-width:(630px)) {
+            grid-column: 2 span;
+        }
+    }
+
+    &__photo{
+        margin-bottom: 21px;
+
+        @include desktop{
+        }
+
+        @include tablet{
+        }
+
+        @include mobile {
+            margin-bottom: 27px;
+        }
+    }
+
+
+    &__form{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+
+        @include desktop{
+            flex-direction: column;
+            justify-content: start; 
+        }
+    }
+
+    &__caption{
+        margin-bottom: 14px;
+        color: var(--color-white);
+        font-size: 24px;
+        font-weight: 400;
+
+        @include mobile{
+            font-size: 18px;
+        }
+    }
+}
+
+@import "form-mailing"

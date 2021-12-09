@@ -1,0 +1,39 @@
+.social {
+
+    display: grid;
+    grid-template-columns: repeat(3, 30px);
+    gap: 20px;
+  
+    &__item{
+      width: 30px;
+      height: 30px;
+    }
+
+    &__link{
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; 
+    }
+
+    &__icon{
+      color: #CACACA;
+    }
+  
+
+    &__link:focus{
+      svg{
+        color: var(--color-focus);
+      }
+    }
+
+    &__icon:hover{
+      color: var(--color-hover);
+    }
+
+    &__icon:active{
+      color: var(--color-active);
+    }
+  }

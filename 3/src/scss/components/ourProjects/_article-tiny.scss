@@ -1,0 +1,7 @@
+.article-tiny{
+    min-height: 295px;
+
+    @include mobile{
+        min-height: 273px;
+    }
+}

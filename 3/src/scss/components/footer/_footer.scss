@@ -1,0 +1,121 @@
+.footer{
+
+    &__inner{
+        min-height: 106px;
+        color: var(--color-white);
+        background-color: #202020;
+
+        .grid{
+            min-height: inherit;
+            align-items: center;
+
+            @include mobile{
+                align-items: start;
+            }
+        }
+
+        @include mobile{
+            min-height: 185px;
+        }
+    }
+
+    &__logo-inner{
+        grid-column: 3 span;
+
+        @include mobile{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 62px;
+            display: grid;
+            align-content: center;
+            justify-content: center;
+            background-color: #4A4A4A;
+        }
+    }
+
+
+    &__logo{
+        margin-bottom: 6px;
+
+        @include mobile{
+            width: fit-content;
+            justify-self: center;
+            margin-bottom: 5px;
+        }
+
+        img{
+            margin: 0;
+        }
+    }
+
+    &__logo-text{
+        color: #E9E9E9;
+        font-family: "TTFirsNeue", sans-serif;
+        font-size: 14px;
+        line-height: 18px;
+
+        @include mobile{
+            font-size: 10px;
+            line-height: 12px;
+        }
+    }
+
+    &__quote{
+        max-width: 360px;
+        grid-column: 5 / 9;
+        justify-self: end;
+        padding-top: 13px;
+        line-height: 22px;
+        transform: translate(4px, -2px);
+
+        @include desktop{
+            width: 361px;
+            grid-column: 3 span;
+            transform: translate(-3px, -2px);
+        }
+
+        @include tablet{
+            display: none;
+        }
+
+    }
+
+    &__quote-text{
+        line-height: 22px;
+    }
+
+    &__autor{
+        color: #999999;
+    }
+
+    &__social{
+        justify-self: end;
+        grid-column: 11/ 13;
+        padding-top: 7px;
+        @include desktop{
+            grid-column: 7/9;
+        }
+
+        @include mobile{
+            grid-column: 2 span;
+            justify-self: center;
+            padding-top: 36px;
+        }
+    }
+
+    &__social-list{
+        justify-content: center;
+    }
+
+    &__social-text{
+        margin-bottom: 9px;
+        color: #CACACA;
+
+        @include mobile{
+            font-size: 16px;
+        }
+    }
+
+}

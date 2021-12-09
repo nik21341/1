@@ -1,0 +1,66 @@
+<header class="header">
+  <div class="header__top">
+    <div class="container grid header__container">
+      <picture class="header__logo">
+        <source media="(max-width: 768px)" data-srcset="img/header/mobile/Logo.png">
+        <source media="(max-width: 1250px)" data-srcset="img/header/desktop/Logo.png">
+        <img class="lazy" data-src="img/header/Logo.png" alt="Логотип">
+      </picture>
+      <nav class="nav header__nav">
+        <ul class="nav__list list-reset">
+          <li class="nav__item"><a href="#aboutus" class="nav__link">О студии</a></li>
+          <li class="nav__item"><a href="#ourProjects" class="nav__link">Наши проекты</a></li>
+          <li class="nav__item"><a href="#services" class="nav__link">Услуги</a></li>
+          <li class="nav__item"><a href="#skill" class="nav__link">Мастер-классы</a></li>
+          <li class="nav__item"><a href="#contacts" class="nav__link">Контакты</a></li>
+        </ul>
+      </nav>
+      <ul class="header__social social list-reset">
+        <li class="social__item">
+          <a href="#" class="social__link" aria-label="Перейти в Инстаграм">
+            <svg class="social__icon" width="30" height="30">
+              <use xlink:href=" img/sprite.svg#inst"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link" aria-label="Перейти в Фейсбук">
+            <svg class="social__icon" width="30" height="30">
+              <use xlink:href=" img/sprite.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link" aria-label="Перейти во Вконтакте">
+            <svg class="social__icon" width="30" height="30">
+              <use xlink:href=" img/sprite.svg#vk"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="header__bottom">
+    <div class="container grid header__container">
+      <button class="header__burger burger btn-reset">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
+      <a class="header__tel tel" href="#">
+        <svg class="tel__icon" width="22" height="22">
+          <use xlink:href=" img/sprite.svg#call"></use>
+        </svg>
+        <span class="tel__number">+7 (495) 42-423-532</span>
+      </a>
+      <form class="header__form form-search">
+        <button type="submit" class="form-search__btn btn-reset">
+          <svg class="form-search__icon" width="100%" height="100%">
+            <use xlink:href=" img/sprite.svg#search"></use>
+          </svg>
+        </button>
+        <input class="form-search__input" type="search" placeholder="Что будем иcкать?">
+      </form>
+    </div>
+  </div>
+</header>

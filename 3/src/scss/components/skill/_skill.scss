@@ -1,0 +1,145 @@
+.skill{
+
+    &__inner{
+        min-height:auto ;
+        padding: 43px 0px 70px 0px;
+        background-color: #202020;
+        color: var(--color-white);
+
+        @include desktop{
+        }
+
+        @include mobile{
+            padding: 22px 0px 60px 0px;
+        }
+    }
+
+    .grid{
+        row-gap: 20px;
+    }
+
+    &__heading{
+        margin-bottom: 17px;
+        font-size: 24px;
+
+        @include mobile{
+            margin-bottom: 14px;
+            font-size: 18px;
+            line-height: 23.22px;
+        }
+    }
+
+    &__datatime{
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    &__photo{
+        grid-column: 4 span;
+
+        @include desktop{
+            max-width: 466px;
+            max-height: 330px;
+        }
+
+        @include tablet{
+            grid-column: 3 span;
+        }
+
+        @include mobile{
+            max-width: 100%;
+            grid-column: 2 span;
+        }
+    }
+
+    &__begin{
+        grid-column: 4 span;
+        align-self: center;
+        transform: translateY(-1px);
+        @include tablet{
+            grid-column: 3 span;
+            transform: translateY(0);
+        }
+
+        @include tablet{
+            padding: 0;
+            align-items: center;
+        }
+
+        @include mobile{
+            grid-column: 2 span;
+        }
+    }
+
+    &__date{
+        color: var(--color-white);
+        margin-right: 20px;
+        .date__icon{
+            margin-right: 3px;
+        }
+    }
+
+    &__time{
+
+        .time__icon{
+            margin-right: 3px;
+        }
+    }
+
+    &__list{
+        display: grid;
+        grid-template-rows:repeat(4, 1fr) ;
+        gap: 30px;
+        grid-column: 4 span;
+
+        @include desktop{
+            grid-column: 8 span;
+            grid-template: repeat(2, 1fr) / repeat(2, 1fr) ;
+            gap: 20px 30px;
+            padding-top: 20px;
+        }
+
+        @include tablet{
+            grid-column: 6 span;
+        }
+
+        @include mobile{
+            grid-column: 2 span;
+            gap: 30px;
+            padding-top: 24px;
+        }
+    }
+
+    &__title{
+        margin-bottom: 3px;
+        font-size: 24px;
+        font-weight: 400;
+
+        @include mobile{
+            margin-bottom: 6px;
+            font-size: 18px;
+        }
+    }
+
+    &__desc{
+        margin-bottom: 49px;
+        color: #CACACA;
+        line-height: 28px;
+
+        @include desktop{
+            margin-bottom: 77px;
+        }
+
+        @include tablet{
+            margin-bottom: 18px;
+        }
+
+        @include mobile{
+            margin-bottom: 23px;
+            font-size: 14px;
+            line-height: 25px;
+        }
+    }
+}
+
+@import "more-skills"

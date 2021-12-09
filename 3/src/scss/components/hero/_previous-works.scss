@@ -1,0 +1,112 @@
+.previous-works{
+
+    &__title{
+        margin-bottom: 16px;
+        font-size: 24px;
+        font-weight: 700;
+        transform: translateY(-8px);
+
+        @include tablet {
+            font-size: 22px;
+            line-height: 22.88px;
+            transform: translateY(-1px);
+        }
+        
+        @include mobile{
+            padding-top: 6px;
+           font-size: 18px; 
+           line-height: 18.72px;
+        }
+    }
+
+    &__photos{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 30px;
+
+        @include desktop{
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        @include mobile{
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+
+        @media (max-width:(640px)) {
+             width: fit-content;
+            margin: 0 auto;
+        }
+       
+    }
+
+    &__img{
+        width: fit-content;
+        justify-self: center;
+    }
+
+
+    &__img:nth-child(1){
+        min-height: 300px;
+        grid-column: 6 span;
+
+        @include desktop{
+            grid-column: 4 span;
+        }
+
+        @media (max-width:(1025px)) {
+            position: absolute;
+            top: 69px;
+            right: 0;
+            width: 497px;
+            min-height: 332px;
+            grid-column: 4 span;
+        }
+        
+
+        @media (max-width:(1023px)) {
+            position: static;
+            width: fit-content;
+            min-height: 228px;
+          }   
+
+        @include mobile{
+            min-height: 186px;
+            grid-column: 2 span;
+        }
+         
+    }
+
+    &__img:nth-child(2){
+        grid-column: 3 span;
+
+        @include desktop{
+            grid-column: 2 span;
+            align-self: end;
+        }
+
+        @include tablet {
+            grid-column: 2 span;
+        }
+
+        @include mobile {
+            grid-column: 1 span;
+        }
+    }
+
+    &__img:nth-child(3){
+        grid-column: 3 span;
+
+        @include desktop{
+            grid-column: 2 span;
+        }
+
+        @include tablet {
+            grid-column: 2 span;
+        }
+
+        @include mobile {
+            grid-column: 1 span;
+        }
+    }
+}
