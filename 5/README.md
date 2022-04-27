@@ -1,8 +1,8 @@
 ## Сайт Blanchard
 
 команды; 
-- 1.gulp - dev версия;
-- 2.gulp buid - build версия;
+- 1. gulp - dev версия;
+- 2. gulp buid - build версия;
 
 Все файлы сайта в папке src
 
