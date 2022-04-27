@@ -1,0 +1,91 @@
+.footer {
+  background-color: var(--color-black);
+
+  &__logo {
+    @include mobile {
+      height: 22px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 47px;
+    padding-bottom: 48px;
+
+    @include tablet {
+      padding: 40px var(--container-offset);
+    }
+
+    @include mobile {
+      flex-direction: column-reverse;
+      padding: 20px var(--container-offset);
+    }
+  }
+
+  &__social {
+    display: flex;
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.social {
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 20px;
+
+      @include tablet {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    width: 45px;
+    height: 45px;
+    color: var(--color-grey);
+
+    @include tablet {
+      width: 60px;
+      height: 60px;
+    }
+
+    @include mobile {
+      width: 50px;
+      height: 50px;
+    }
+
+    &:hover:not(:focus-visible) {
+      @include hover-effect {
+        color: var(--color-white);
+      }
+    }
+
+    &:focus-visible {
+      color: var(--color-white);
+    }
+
+    &:active:not(:focus-visible) {
+      color: var(--color-hover-2);
+    }
+
+    &:active {
+      @include active-effect {
+        color: var(--color-hover-2);
+      }
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+    fill: currentColor;
+  }
+}

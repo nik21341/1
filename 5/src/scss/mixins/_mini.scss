@@ -1,0 +1,17 @@
+@mixin bg-cover {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin hover-effect {
+  @media (min-width: (1025px)) {
+    @content;
+  }
+}
+
+@mixin active-effect {
+  @media (max-width: (1024px)) {
+    @content;
+  }
+}

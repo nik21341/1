@@ -1,0 +1,143 @@
+<section class="gallery" id="gallery">
+  <div class="container gallery__inner">
+    <div class="gallery__inner-left">
+      <h2 class="gallery__heading heading">Галерея</h2>
+      <p class="gallery__filter">Фильтр:</p>
+      <select class="gallery__select" aria-label="Фильтр галереи">
+        <option value="Живопись">Живопись</option>
+        <option value="Рисунок">Рисунок</option>
+        <option value="Скульптура">Скульптура</option>
+      </select>
+      <div class="gallery__checkbox-list">
+        <label class="gallery__checkbox check">
+          <input class="check__input" type="checkbox">
+          <span class="check__box"></span>
+          <span class="check__text">XIX век</span>
+        </label>
+        <label class="gallery__checkbox check">
+          <input class="check__input" type="checkbox">
+          <span class="check__box"></span>
+          <span class="check__text">XX век</span>
+        </label>
+        <label class="gallery__checkbox check">
+          <input class="check__input" type="checkbox">
+          <span class="check__box"></span>
+          <span class="check__text">Современность</span>
+        </label>
+      </div>
+    </div>
+    <div class="gallery__inner-right">
+      <div class="gallery__navigation navigation-gallery">
+        <button class="navigation-gallery__btn navigation-gallery__btn--prev btn-reset"
+          aria-label="Переключить на предыдущий слайд"></button>
+        <span class="navigation-gallery__pagination"></span>
+        <button class="navigation-gallery__btn navigation-gallery__btn--next btn-reset"
+          aria-label="Переключить на следующий слайд"></button>
+      </div>
+      <div class="swiper gallery__swiper">
+        <ul class="swiper-wrapper gallery__swiper-wrapper list-reset" title="Слайдер галереи">
+          <li class="swiper-slide gallery__slide">
+            <button class="gallery__open-modal btn-reset" data-src="img/gallery/gallery-1"
+              aria-label="Подробнее о картине">
+              <picture class="gallery__image">
+                <source media="(max-width: 576px)" srcset="img/gallery/gallery-1-320.webp" type="image/webp">
+                <source media="(max-width: 576px)" srcset="img/gallery/gallery-1-320.jpg">
+                <source media="(max-width: 768px)" srcset="img/gallery/gallery-1-768.webp" type="image/webp">
+                <source media="(max-width: 768px)" srcset="img/gallery/gallery-1-768.jpg">
+                <source media="(max-width: 1024px)" srcset="img/gallery/gallery-1-1024.webp" type="image/webp">
+                <source media="(max-width: 1024px)" srcset="img/gallery/gallery-1-1024.jpg">
+                <source srcset="img/gallery/gallery-1.webp">
+                <img loading="lazy" src="img/gallery/gallery-1.jpg" class="image" alt="Картина 1">
+              </picture>
+            </button>
+          </li>
+          <li class="swiper-slide gallery__slide">
+            <button class="gallery__open-modal btn-reset" data-src="img/gallery/gallery-2"
+              aria-label="Подробнее о картине">
+              <picture class="gallery__image">
+                <source media="(max-width: 576px)" srcset="img/gallery/gallery-2-320.webp" type="image/webp" width="290"
+                  height="367">
+                <source media="(max-width: 576px)" srcset="img/gallery/gallery-2-320.jpg">
+                <source media="(max-width: 768px)" srcset="img/gallery/gallery-2-768.webp" type="image/webp" width="315"
+                  height="330">
+                <source media="(max-width: 768px)" srcset="img/gallery/gallery-2-768.jpg">
+                <source media="(max-width: 1024px)" srcset="img/gallery/gallery-2-1024.webp" type="image/webp">
+                <source media="(max-width: 1024px)" srcset="img/gallery/gallery-2-1024.jpg">
+                <source srcset="img/gallery/gallery-2.webp">
+                <img loading="lazy" src="img/gallery/gallery-2.jpg" class="image" alt="Картина 2">
+              </picture>
+            </button>
+          </li>
+          <li class="swiper-slide gallery__slide">
+            <button class="gallery__open-modal btn-reset" data-src="img/gallery/gallery-3"
+              aria-label="Подробнее о картине">
+              <picture class="gallery__image">
+                <source media="(max-width: 576px)" srcset="img/gallery/gallery-3-320.webp" type="image/webp" width="290"
+                  height="367">
+                <source media="(max-width: 576px)" srcset="img/gallery/gallery-3-320.jpg">
+                <source media="(max-width: 768px)" srcset="img/gallery/gallery-3-768.webp" type="image/webp" width="315"
+                  height="330">
+                <source media="(max-width: 768px)" srcset="img/gallery/gallery-3-768.jpg">
+                <source media="(max-width: 1024px)" srcset="img/gallery/gallery-3-1024.webp" type="image/webp">
+                <source media="(max-width: 1024px)" srcset="img/gallery/gallery-3-1024.jpg">
+                <source srcset="img/gallery/gallery-3.webp">
+                <img loading="lazy" src="img/gallery/gallery-3.jpg" class="image" alt="Картина 3">
+              </picture>
+            </button>
+          </li>
+          <li class="swiper-slide gallery__slide">
+            <button class="gallery__open-modal btn-reset" data-src="img/gallery/gallery-4"
+              aria-label="Подробнее о картине">
+              <picture class="gallery__image">
+                <source media="(max-width: 576px)" srcset="img/gallery/gallery-4-320.webp" type="image/webp" width="290"
+                  height="367">
+                <source media="(max-width: 576px)" srcset="img/gallery/gallery-4-320.jpg">
+                <source media="(max-width: 768px)" srcset="img/gallery/gallery-4-768.webp" type="image/webp" width="315"
+                  height="330">
+                <source media="(max-width: 768px)" srcset="img/gallery/gallery-4-768.jpg">
+                <source media="(max-width: 1024px)" srcset="img/gallery/gallery-4-1024.webp" type="image/webp">
+                <source media="(max-width: 1024px)" srcset="img/gallery/gallery-4-1024.jpg">
+                <source srcset="img/gallery/gallery-4.webp">
+                <img loading="lazy" src="img/gallery/gallery-4.jpg" class="image" alt="Картина 4">
+              </picture>
+            </button>
+          </li>
+          <li class="swiper-slide gallery__slide">
+            <button class="gallery__open-modal btn-reset" data-src="img/gallery/gallery-5"
+              aria-label="Подробнее о картине">
+              <picture class="gallery__image">
+                <source media="(max-width: 576px)" srcset="img/gallery/gallery-5-320.webp" type="image/webp" width="290"
+                  height="367">
+                <source media="(max-width: 576px)" srcset="img/gallery/gallery-5-320.jpg">
+                <source media="(max-width: 768px)" srcset="img/gallery/gallery-5-768.webp" type="image/webp" width="315"
+                  height="330">
+                <source media="(max-width: 768px)" srcset="img/gallery/gallery-5-768.jpg">
+                <source media="(max-width: 1024px)" srcset="img/gallery/gallery-5-1024.webp" type="image/webp">
+                <source media="(max-width: 1024px)" srcset="img/gallery/gallery-5-1024.jpg">
+                <source srcset="img/gallery/gallery-5.webp">
+                <img loading="lazy" src="img/gallery/gallery-5.jpg" class="image" alt="Картина 5">
+              </picture>
+            </button>
+          </li>
+          <li class="swiper-slide gallery__slide">
+            <button class="gallery__open-modal btn-reset" data-src="img/gallery/gallery-6"
+              aria-label="Подробнее о картине">
+              <picture class="gallery__image">
+                <source media="(max-width: 576px)" srcset="img/gallery/gallery-5-320.webp" type="image/webp" width="290"
+                  height="367">
+                <source media="(max-width: 576px)" srcset="img/gallery/gallery-5-320.jpg">
+                <source media="(max-width: 768px)" srcset="img/gallery/gallery-6-768.webp" type="image/webp" width="315"
+                  height="330">
+                <source media="(max-width: 768px)" srcset="img/gallery/gallery-6-768.jpg">
+                <source media="(max-width: 1024px)" srcset="img/gallery/gallery-6-1024.webp" type="image/webp">
+                <source media="(max-width: 1024px)" srcset="img/gallery/gallery-6-1024.jpg">
+                <source srcset="img/gallery/gallery-6.webp">
+                <img loading="lazy" src="img/gallery/gallery-6.jpg" class="image" alt="Картина 6">
+              </picture>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

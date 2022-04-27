@@ -1,0 +1,130 @@
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  overflow-y: auto;
+  overflow-x: hidden;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s, visibility .3s;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+  }
+
+  &__container {
+    position: relative;
+    width: 900px;
+    min-height: 500px;
+    margin: 50px auto;
+    display: inline-flex;
+    vertical-align: middle;
+    background-color: var(--color-white);
+    cursor: default;
+    text-align: left;
+
+    @include tablet {
+      width: 595px;
+      min-height: 595px;
+    }
+
+    @include small-tablet {
+      width: 668px;
+    }
+
+    @media (max-width: 675px) {
+      flex-direction: column;
+      width: calc(100% - 30px);
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: block;
+    width: 16px;
+    height: 16px;
+
+    @media (max-width: 675px) {
+      top: 10px;
+      right: 10px;
+    }
+  }
+
+  &__close-icon {
+    display: block;
+    width: inherit;
+    height: inherit;
+    fill: currentColor;
+  }
+
+  &__img {
+    width: 400px;
+
+    @include tablet {
+      width: 264px;
+    }
+
+    @include small-tablet {
+      width: 301px;
+    }
+
+    @media (max-width: 675px) {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 49px;
+
+    @media (max-width: 675px) {
+      padding: 20px 20px 26px 20px;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32.68px;
+  }
+
+  &__alt-img {
+    font-weight: 600;
+    line-height: 21.79px;
+  }
+
+  &__date {
+    margin-bottom: 33px;
+    font-size: 12px;
+    line-height: 16.34px;
+    color: #969696;
+
+    @media (max-width: 675px) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__desc {
+    line-height: 32px;
+  }
+
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+}

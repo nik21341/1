@@ -1,0 +1,22 @@
+:root {
+  // base
+  --font-family: 'Open Sans', sans-serif;
+  --content-width: 1600px;
+  --container-offset: 50px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --color-white: #fff;
+  --color-black: #000000;
+  --color-focus: #7943a4;
+  --color-hover: #C283F3;
+  --color-hover-2: #9D5CD0;
+  --color-grey: #cacaca;
+}
+
+
+@include mobile {
+  :root {
+    --container-offset: 15px;
+  }
+}

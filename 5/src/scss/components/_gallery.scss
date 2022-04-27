@@ -1,0 +1,453 @@
+.gallery {
+  & {
+    background-image: url('../img/gallery/gallery-bg.jpg');
+    @include bg-cover;
+
+    @include tablet {
+      background-image: url('../img/gallery/gallery-bg-1024.jpg');
+    }
+
+    @include small-tablet {
+      background-image: url('../img/gallery/gallery-bg-768.jpg');
+    }
+
+    @include mobile {
+      background-image: url('../img/gallery/gallery-bg-320.jpg');
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 78px var(--container-offset);
+
+    @include small-tablet {
+      flex-direction: column;
+    }
+
+    @include mobile {
+      padding: 50px var(--container-offset);
+    }
+
+    background-image: url('../img/gallery/gallery-bg.jpg');
+    @include bg-cover;
+
+    @include tablet {
+      background-image: url('../img/gallery/gallery-bg-1024.jpg');
+    }
+
+    @include small-tablet {
+      background-image: url('../img/gallery/gallery-bg-768.jpg');
+    }
+
+    @include mobile {
+      background-image: url('../img/gallery/gallery-bg-320.jpg');
+    }
+  }
+
+  &__inner-left {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-right: 20px;
+    color: var(--color-white);
+
+    @include tablet {
+      width: 280px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 46px;
+    }
+
+    @include mobile {
+      width: 100%;
+      margin: 0px 0px 36px 0px;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 23px;
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__filter {
+    margin-bottom: 16px;
+    font-weight: 600;
+
+    @include mobile {
+      margin-bottom: 11px;
+    }
+  }
+
+  &__checkbox-list {
+    margin-bottom: 7px;
+
+    @include tablet {
+      margin-bottom: 42px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 0px;
+    }
+  }
+
+  &__checkbox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    cursor: pointer;
+
+
+    &:hover:not(:focus-visible) {
+      @include hover-effect {
+        color: var(--color-hover);
+
+        .check__box {
+          border-color: var(--color-hover);
+        }
+      }
+    }
+
+    &:focus-visible {
+      color: var(--color-hover);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 14px;
+    }
+  }
+
+  &__inner-right {
+    padding-top: 29px;
+    width: 71.88%;
+
+    @include tablet {
+      width: 64.2%;
+    }
+
+    @include small-tablet {
+      padding-top: 0;
+      width: 100%;
+    }
+
+    @include mobile {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__swiper {
+    max-width: 100%;
+    margin: 0;
+
+  }
+
+  &__navigation {
+    max-width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    color: var(--color-white);
+
+    @include small-tablet {
+      margin-bottom: 32px;
+    }
+
+    @include mobile {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  &__swiper-wrapper {
+
+    @include mobile {
+      margin-bottom: 18px;
+    }
+  }
+
+  &__open-modal {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    z-index: 2;
+
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      right: 20px;
+      bottom: 20px;
+      z-index: 3;
+      background-color: rgba(0, 0, 0, 0.5);
+      background-image: url('../img/gallery/more-detailed.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+
+      @include tablet {
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      border: 3px solid transparent;
+      transition: border 0.3s ease-in-out;
+    }
+
+    &:hover:not(:focus-visible)::before {
+      @include hover-effect {
+        opacity: 1;
+      }
+    }
+
+    &:focus-visible::after {
+      border-color: var(--color-focus);
+    }
+
+    &:active:not(:focus-visible)::before {
+      opacity: 1;
+    }
+
+    &:active:not(:focus-visible)::after {
+      background-color: rgba(194, 131, 243, 0.4);
+      border: 2px solid #D1A9F0;
+    }
+
+
+    &:active::before {
+      @include active-effect {
+        opacity: 1;
+      }
+    }
+
+    &:active::after {
+      @include active-effect {
+        background-color: rgba(194, 131, 243, 0.4);
+        border: 2px solid #D1A9F0;
+      }
+    }
+  }
+}
+
+.choices {
+  margin-bottom: auto;
+  border-radius: 6px;
+
+
+  @include small-tablet {
+    margin-bottom: 49px;
+  }
+
+  @include mobile {
+    margin-bottom: 37px;
+  }
+
+  &__list {
+    border-radius: 6px;
+    background-color: var(--color-black);
+    color: #999999;
+  }
+
+  &[data-type*=select-one] &__inner {
+    border-radius: 6px;
+    padding: 0px 0px 0px 0px;
+    min-height: 40px;
+    background-color: transparent;
+    font-size: 16px;
+  }
+
+  &.is-open &__inner {
+    border-radius: 6px;
+  }
+
+  &__list--dropdown &__item,
+  &__list[aria-expanded] &__item {
+    font-size: inherit;
+    min-height: 40px;
+    padding: 9px 25px 10px 16px;
+    background-color: black;
+  }
+
+  &__list--single {
+    color: var(--color-white);
+    padding: 9px 25px 10px 16px;
+    background-color: transparent;
+  }
+
+  .is-open &__list--dropdown,
+  .is-open &__list--dropdown[aria-expanded] {
+    border-color: #999999;
+  }
+
+  &__list--dropdown &__item--selectable.is-highlighted,
+  &__list[aria-expanded] &__item--selectable.is-highlighted {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--color-white);
+  }
+
+  &[data-type*=select-one]::after {
+    content: "";
+    height: 0;
+    width: 0;
+    border-style: solid;
+    border-color: var(--color-white) transparent transparent;
+    border-width: 5px;
+    position: absolute;
+    right: 11.5px;
+    top: 50%;
+    margin-top: -2.5px;
+    pointer-events: none;
+  }
+
+  &[data-type*=select-one].is-open::after {
+    border-color: transparent transparent var(--color-white);
+    margin-top: -7.5px;
+  }
+
+  &:focus-visible,
+  &:hover:not(:focus-visible) {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.check {
+
+  &__input {
+    appearance: none;
+  }
+
+  &__input:checked+&__box {
+    border-color: var(--color-hover);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      display: block;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: var(--color-hover);
+    }
+  }
+
+  &__input:checked~&__text {
+    color: var(--color-hover);
+  }
+
+
+  &__input:focus-visible+&__box {
+    border-color: var(--color-hover);
+  }
+
+
+  &__input:focus-visible~&__text {
+    color: var(--color-hover);
+  }
+
+  &__box {
+    position: relative;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 13px;
+    border: 1px solid var(--color-white);
+
+    @include tablet {
+      margin-right: 11px;
+    }
+  }
+}
+
+.navigation-gallery {
+
+  &__btn {
+    position: relative;
+    display: inline-block;
+    width: 29px;
+    height: 29px;
+    border: 2px solid transparent;
+    background-color: #666666;
+    border-radius: 50%;
+
+    &:hover:not(:focus-visible) {
+      @include hover-effect {
+        background-color: var(--color-hover-2);
+      }
+    }
+
+    &:focus-visible {
+      border-color: var(--color-black);
+    }
+
+    &:active:not(:focus-visible) {
+      background-color: var(--color-focus);
+      border-color: var(--color-black);
+    }
+
+    &:active {
+      @include active-effect {
+        background-color: var(--color-focus);
+        border-color: var(--color-black);
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 9px;
+      left: 9px;
+      display: block;
+      width: 7.07px;
+      height: 7.07px;
+      border: 1px solid;
+      transform: rotate(45deg);
+    }
+
+    &--prev {
+      &::before {
+        border-color: transparent transparent var(--color-white) var(--color-white);
+      }
+    }
+
+    &--next {
+      &::before {
+        border-color: var(--color-white) var(--color-white) transparent transparent;
+      }
+    }
+
+    &--disabled {
+      background-color: #b3b3b3;
+      opacity: 1;
+      pointer-events: none;
+    }
+  }
+
+  &__pagination {
+    width: fit-content;
+  }
+
+
+}

@@ -1,0 +1,42 @@
+<section class="contacts" id="contacts">
+  <h2 class="visually-hidden">Контакты</h2>
+  <div class="contacts__inner">
+    <div class="container contacts__inner-top">
+      <address class="contacts__address">
+        <span> Шоурум №4</span>
+        Леонтьевский переулок, дом 5/1
+      </address>
+      <form action="https://jsonplaceholder.typicode.com/posts" method="POST" class="contacts__form form-contacts"
+        autocomplete="off">
+        <label class="form-contacts__label">
+          <input type="text" name="Имя" class="form-contacts__input form-contacts__input--name input-reset"
+            placeholder="Имя*" autocomplete="off">
+        </label>
+        <label class="form-contacts__label">
+          <input type="tel" name="Телефон" class="form-contacts__input form-contacts__input--tel input-reset"
+            placeholder="Телефон*" autocomplete="off">
+        </label>
+        <button class="form-contacts__btn btn-reset btn-focus" type="submit">Заказать <span>обратный
+            звонок</span></button>
+      </form>
+      <div class="contacts__communication communication">
+        <span class="communication__title">Связаться в один клик</span>
+        <ul class="communication__messengers list-reset" title="Мессенджеры для связи">
+          <li class="communication__item">
+            <a href="#" target="_blank" class="communication__link communication__link--whatsapp"
+              aria-label="Перейти в ватцап">
+              <img src="img/contacts/whatsapp.svg" alt="Логотип whatsapp">
+            </a>
+          </li>
+          <li class="communication__item">
+            <a href="#" target="_blank" class="communication__link communication__link--telegtram"
+              aria-label="Перейти в телеграм">
+              <img src="img/contacts/telegram.svg" alt="Логотип telegram">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="contacts__map" id="map"></div>
+</section>
