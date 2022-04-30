@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const desc = catalog.querySelector('.catalog__lead');
   const linkBack = catalog.querySelector('.catalog__link');
   const link = catalog.querySelectorAll('.accordion__link');
+  const activeArtist = data.artists.find(item => item.id === '12');
 
   link.forEach((item, index) => {
     item.setAttribute('data-artist-id', `${index + 1}`);
@@ -17,6 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const dataArtist = data.artists.find(item => item.id === dataLink);
 
     item.addEventListener('click', (e) => {
+      item.classList.add('active');
+
+      link.forEach(el => {
+        if (el !== item) {
+          el.classList.remove('active');
+        }
+      })
 
       if (window.innerWidth <= 1024) {
         item.href = '#painter';
@@ -44,6 +52,17 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     })
   })
+
+  if (activeArtist) {
+    img.src = `${activeArtist.img}.jpg`;
+    source.srcset = `${activeArtist.img}.webp`;
+    name.textContent = activeArtist.name;
+    date.textContent = activeArtist.date;
+    desc.textContent = activeArtist.desc;
+
+    date.style.display = 'inline-block';
+    linkBack.style.display = 'none';
+  }
 
 });
 

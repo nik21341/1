@@ -136,7 +136,7 @@
     align-items: center;
     justify-content: space-between;
     border-top: 1px solid var(--color-grey);
-    transition: .1s ease-in-out;
+    transition: .3s ease-in-out;
 
     &::before {
       content: '';
@@ -148,6 +148,7 @@
       background-color: var(--color-hover-2);
       z-index: 2;
       opacity: 0;
+      transition: .3s ease-in-out;
     }
 
     @include mobile {
@@ -165,7 +166,7 @@
         }
 
         .accordion__icon {
-          background-color: #D1A9F0;
+          background-image: url('../img/catalog/bullet/bullet-hover-focus.svg');
         }
       }
     }
@@ -173,11 +174,11 @@
     &:focus-visible {
       .accordion__title {
         color: var(--color-white);
-        background: var(--color-hover-2);
+        background-color: var(--color-hover-2);
       }
 
       .accordion__icon {
-        background-color: #D1A9F0;
+        background-image: url('../img/catalog/bullet/bullet-hover-focus.svg');
       }
     }
   }
@@ -186,6 +187,7 @@
     font-weight: 600;
     font-size: 24px;
     line-height: 32px;
+    transition: background-color .3s ease-in-out;
 
     @include mobile {
       font-size: 18px;
@@ -195,34 +197,16 @@
   &__icon {
     position: relative;
     display: inline-block;
-    width: 48px;
-    height: 48px;
-    border: 2px solid transparent;
+    width: 50px;
+    height: 50px;
     border-radius: 100%;
-    background-color: var(--color-grey);
-    transition: transform 0.3s ease-out;
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      width: 10.79px;
-      height: 10.79px;
-      border: 1px solid;
-      border-color: transparent var(--color-black) var(--color-black) transparent;
-      background-color: transparent;
-      transform: translate(-50%, -50%) rotate(45deg);
-    }
+    background-image: url('../img/catalog/bullet/bullet.svg');
+    @include bg-cover;
+    transition: transform 0.3s ease-out, background-image 0.3s ease-out;
 
     @include mobile {
       width: 28px;
       height: 28px;
-
-      &::before {
-        width: 7.07px;
-        height: 7.07px;
-      }
     }
   }
 
@@ -249,6 +233,13 @@
       }
     }
 
+    &.active {
+      color: #9D5CD0;
+
+      &:focus-visible {
+        color: var(--color-white);
+      }
+    }
 
   }
 
@@ -346,8 +337,8 @@
     }
 
     .accordion__icon {
-      background-color: #D1A9F0;
-      border-color: var(--color-hover-2);
+      background-image: url('../img/catalog/bullet/bullet-hover-focus.svg');
+      box-shadow: inset 0 0 0 2px var(--color-focus);
       transform: rotate(180deg);
     }
   }

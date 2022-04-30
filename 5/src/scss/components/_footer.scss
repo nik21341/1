@@ -50,6 +50,7 @@
     width: 45px;
     height: 45px;
     color: var(--color-grey);
+    transition: color .3s ease-in-out;
 
     @include tablet {
       width: 60px;

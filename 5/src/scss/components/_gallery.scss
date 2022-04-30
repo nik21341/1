@@ -28,21 +28,6 @@
     @include mobile {
       padding: 50px var(--container-offset);
     }
-
-    background-image: url('../img/gallery/gallery-bg.jpg');
-    @include bg-cover;
-
-    @include tablet {
-      background-image: url('../img/gallery/gallery-bg-1024.jpg');
-    }
-
-    @include small-tablet {
-      background-image: url('../img/gallery/gallery-bg-768.jpg');
-    }
-
-    @include mobile {
-      background-image: url('../img/gallery/gallery-bg-320.jpg');
-    }
   }
 
   &__inner-left {
@@ -101,6 +86,7 @@
     align-items: center;
     width: fit-content;
     cursor: pointer;
+    transition: color .3s ease-in-out, border-color .3s ease-in-out;
 
 
     &:hover:not(:focus-visible) {
@@ -253,7 +239,7 @@
 .choices {
   margin-bottom: auto;
   border-radius: 6px;
-
+  transition: background-color .2s ease-in-out;
 
   @include small-tablet {
     margin-bottom: 49px;
@@ -268,6 +254,18 @@
     background-color: var(--color-black);
     color: #999999;
   }
+
+  &__item {
+    transition: background-color .2s ease-in-out;
+  }
+
+
+  &__list--dropdown,
+  &__list[aria-expanded] {
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+  }
+
 
   &[data-type*=select-one] &__inner {
     border-radius: 6px;
@@ -297,6 +295,7 @@
 
   .is-open &__list--dropdown,
   .is-open &__list--dropdown[aria-expanded] {
+    opacity: 1;
     border-color: #999999;
   }
 
@@ -304,6 +303,10 @@
   &__list[aria-expanded] &__item--selectable.is-highlighted {
     background-color: rgba(255, 255, 255, 0.2);
     color: var(--color-white);
+  }
+
+  &__list--dropdown &__item--selectable.is-selected {
+    display: none;
   }
 
   &[data-type*=select-one]::after {
@@ -374,6 +377,7 @@
     height: 12px;
     margin-right: 13px;
     border: 1px solid var(--color-white);
+    transition: color .3s ease-in-out, border-color .3s ease-in-out;
 
     @include tablet {
       margin-right: 11px;
@@ -385,62 +389,39 @@
 
   &__btn {
     position: relative;
-    display: inline-block;
     width: 29px;
     height: 29px;
-    border: 2px solid transparent;
-    background-color: #666666;
     border-radius: 50%;
+    background-image: url('../img/gallery/bullet/bullet.svg');
+    @include bg-cover;
+    transition: background-image .3s ease-in-out, border-color .3s ease-in-out;
 
     &:hover:not(:focus-visible) {
       @include hover-effect {
-        background-color: var(--color-hover-2);
+        background-image: url('../img/gallery/bullet/bullet-hover.svg');
       }
     }
 
     &:focus-visible {
-      border-color: var(--color-black);
+      background-image: url('../img/gallery/bullet/bullet-focus.svg');
     }
 
     &:active:not(:focus-visible) {
-      background-color: var(--color-focus);
-      border-color: var(--color-black);
+      background-image: url('../img/gallery/bullet/bullet-active.svg');
     }
 
     &:active {
       @include active-effect {
-        background-color: var(--color-focus);
-        border-color: var(--color-black);
+        background-image: url('../img/gallery/bullet/bullet-active.svg');
       }
-    }
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 9px;
-      left: 9px;
-      display: block;
-      width: 7.07px;
-      height: 7.07px;
-      border: 1px solid;
-      transform: rotate(45deg);
     }
 
     &--prev {
-      &::before {
-        border-color: transparent transparent var(--color-white) var(--color-white);
-      }
-    }
-
-    &--next {
-      &::before {
-        border-color: var(--color-white) var(--color-white) transparent transparent;
-      }
+      transform: rotate(180deg);
     }
 
     &--disabled {
-      background-color: #b3b3b3;
-      opacity: 1;
+      opacity: .5;
       pointer-events: none;
     }
   }
@@ -448,6 +429,5 @@
   &__pagination {
     width: fit-content;
   }
-
 
 }

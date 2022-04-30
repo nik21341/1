@@ -11,7 +11,16 @@ document.addEventListener('DOMContentLoaded', () => {
     content.style.maxHeight = null;
   }
 
-  accordions.forEach(el => {
+  const openAccordion = (item) => {
+    const control = item.querySelector('.accordion__control');
+    const content = item.querySelector('.accordion__content');
+
+    control.setAttribute('aria-expanded', true);
+    content.setAttribute('aria-hidden', false);
+    content.style.maxHeight = content.scrollHeight + 'px';
+  }
+
+  accordions.forEach((el, index) => {
     const control = el.querySelector('.accordion__control');
 
     if (el.querySelector('.accordion-empty__link')) {
@@ -22,16 +31,15 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     }
 
+    if (el.classList.contains('open')) {
+      openAccordion(el)
+    }
+
     control.addEventListener('click', () => {
       el.classList.toggle('open');
 
       if (el.classList.contains('open')) {
-        const control = el.querySelector('.accordion__control');
-        const content = el.querySelector('.accordion__content');
-
-        control.setAttribute('aria-expanded', true);
-        content.setAttribute('aria-hidden', false);
-        content.style.maxHeight = content.scrollHeight + 'px';
+        openAccordion(el)
       } else {
         closeAccordion(el);
       }
@@ -43,11 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
       };
     });
 
-    // закрытие всех аккордеоннов
-    accordions.forEach(item => {
-      if (el !== item) {
-        closeAccordion(item);
-      };
-    })
+    if (index === 0) {
+      openAccordion(el)
+    }
   });
 });

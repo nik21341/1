@@ -177,26 +177,25 @@
   }
 
   &__button {
+    position: absolute;
+    top: 50%;
+    height: 50px;
+    width: 50px;
+
     @include tablet {
       display: none;
     }
 
     &--next {
       left: auto;
-      right: calc(var(--container-offset) - 20px);
-
-      &::before {
-        border-color: var(--color-black) var(--color-black) transparent transparent;
-      }
+      right: calc(var(--container-offset) - 24px);
+      transform: rotate(-90deg);
     }
 
     &--prev {
       right: auto;
-      left: calc(var(--container-offset) - 20px);
-
-      &::before {
-        border-color: transparent transparent var(--color-black) var(--color-black);
-      }
+      left: calc(var(--container-offset) - 24px);
+      transform: rotate(90deg);
     }
 
     &--disabled {
@@ -224,9 +223,9 @@
     &:not(:last-child) {
       margin-right: 15px;
     }
-  }
 
-  &__pagination-bullet--active {
-    background-color: #666666;
+    &--active {
+      background-color: #666666;
+    }
   }
 }

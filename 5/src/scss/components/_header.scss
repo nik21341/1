@@ -435,89 +435,87 @@
       margin-bottom: 20px;
     }
 
+    &--tintoretto {
+      background-image: url('../img/header/dropdown/Tintoretto.jpg');
+    }
+
+    &--friedrich {
+      background-image: url('../img/header/dropdown/Friedrich.jpg');
+    }
+
+    &--leonardo {
+      background-image: url('../img/header/dropdown/Leonardo.jpg');
+    }
+
+    &--verrocchio {
+      background-image: url('../img/header/dropdown/Verrocchio.jpg');
+    }
+
+    &--mone {
+      background-image: url('../img/header/dropdown/Mone.jpg');
+    }
+
+    &--sisley {
+      background-image: url('../img/header/dropdown/Sisley.jpg');
+    }
+
+    &--mane {
+      background-image: url('../img/header/dropdown/Mane.jpg');
+    }
+
+    &--renoir {
+      background-image: url('../img/header/dropdown/Renoir.jpg');
+    }
+
+    &--van-gogh {
+      background-image: url('../img/header/dropdown/Van-Gogh.jpg');
+    }
+
+    &--cezanne {
+      background-image: url('../img/header/dropdown/Cezanne.jpg');
+    }
+
+    &--gauguin {
+      background-image: url('../img/header/dropdown/Gauguin.jpg');
+    }
+
+    &--seurat {
+      background-image: url('../img/header/dropdown/Seurat.jpg');
+    }
+
+    &--kandinsky {
+      background-image: url('../img/header/dropdown/Kandinsky.jpg');
+    }
+
+    &--marinetti {
+      background-image: url('../img/header/dropdown/Marinetti.jpg');
+    }
+
+    &--malevich {
+      background-image: url('../img/header/dropdown/Malevich.jpg');
+    }
+
+    &--picasso {
+      background-image: url('../img/header/dropdown/Picasso.jpg');
+    }
+
+    &--carra {
+      background-image: url('../img/header/dropdown/Carra.jpg');
+    }
+
+    &--pratella {
+      background-image: url('../img/header/dropdown/Pratella.jpg');
+    }
+
+    &--severini {
+      background-image: url('../img/header/dropdown/Severini.jpg');
+    }
+
+    &--balla {
+      background-image: url('../img/header/dropdown/Balla.jpg');
+    }
+
   }
-
-  &__item--tintoretto {
-    background-image: url('../img/header/dropdown/Tintoretto.webp');
-  }
-
-  &__item--friedrich {
-    background-image: url('../img/header/dropdown/Friedrich.webp');
-  }
-
-  &__item--leonardo {
-    background-image: url('../img/header/dropdown/Leonardo.webp');
-  }
-
-  &__item--verrocchio {
-    background-image: url('../img/header/dropdown/Verrocchio.webp');
-  }
-
-  &__item--mone {
-    background-image: url('../img/header/dropdown/Mone.webp');
-  }
-
-  &__item--sisley {
-    background-image: url('../img/header/dropdown/Sisley.webp');
-  }
-
-  &__item--mane {
-    background-image: url('../img/header/dropdown/Mane.webp');
-  }
-
-  &__item--renoir {
-    background-image: url('../img/header/dropdown/Renoir.webp');
-  }
-
-  &__item--van-gogh {
-    background-image: url('../img/header/dropdown/Van-Gogh.webp');
-  }
-
-  &__item--cezanne {
-    background-image: url('../img/header/dropdown/Cezanne.webp');
-  }
-
-  &__item--gauguin {
-    background-image: url('../img/header/dropdown/Gauguin.webp');
-  }
-
-  &__item--seurat {
-    background-image: url('../img/header/dropdown/Seurat.webp');
-  }
-
-  &__item--kandinsky {
-    background-image: url('../img/header/dropdown/Kandinsky.webp');
-  }
-
-  &__item--marinetti {
-    background-image: url('../img/header/dropdown/Marinetti.webp');
-  }
-
-  &__item--malevich {
-    background-image: url('../img/header/dropdown/Malevich.webp');
-  }
-
-  &__item--picasso {
-    background-image: url('../img/header/dropdown/Picasso.webp');
-  }
-
-  &__item--carra {
-    background-image: url('../img/header/dropdown/Carra.webp');
-  }
-
-  &__item--pratella {
-    background-image: url('../img/header/dropdown/Pratella.webp');
-  }
-
-  &__item--severini {
-    background-image: url('../img/header/dropdown/Severini.webp');
-  }
-
-  &__item--balla {
-    background-image: url('../img/header/dropdown/Balla.webp');
-  }
-
-
 
   &__link {
     display: block;
@@ -525,6 +523,7 @@
     min-height: inherit;
     padding: 10px 15px;
     color: var(--color-white);
+    transition: box-shadow .3s ease-in-out, background-color .3s ease-in-out;
 
     &:hover:not(:focus-visible) {
       box-shadow: inset 0 0 0 2px var(--color-hover-2);
@@ -626,6 +625,7 @@
     line-height: 23px;
     color: var(--color-white);
     border-bottom: 1px solid rgba(255, 255, 255, 0.85);
+    transition: border-color .3s ease-in-out;
 
     &::placeholder {
       color: var(--color-white);

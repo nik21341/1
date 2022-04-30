@@ -114,7 +114,6 @@ a {
   width: 100%;
 }
 
-
 .container {
   position: relative;
   width: 100%;
@@ -271,30 +270,15 @@ a {
 }
 
 .btn-swiper {
-  position: absolute;
-  top: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50px;
-  width: 50px;
-  background-color: var(--color-grey);
+  background-image: url('../img/catalog/bullet/bullet.svg');
+  @include bg-cover;
   border-radius: 50%;
   z-index: 99;
-
-  &::before {
-    content: "";
-    display: inline-block;
-    width: 11.79px;
-    height: 11.79px;
-    border: 1px solid transparent;
-    background-color: transparent;
-    transform: rotate(45deg);
-  }
+  transition: background-image .3s ease-in-out, box-shadow .3s ease-in-out;
 
   &:hover:not(:focus-visible) {
     @include hover-effect {
-      box-shadow: inset 0 0 0 2px #D1A9F0;
+      background-image: url('../img/catalog/bullet/bullet-hover-focus.svg');
     }
   }
 
@@ -303,16 +287,21 @@ a {
   }
 
   &:active:not(:focus-visible) {
+    background-image: url('../img/catalog/bullet/bullet-hover-focus.svg');
     box-shadow: inset 0 0 0 2px var(--color-hover-2);
-    background-color: #D1A9F0;
   }
 
   &:active {
     @include active-effect {
+      background-image: url('../img/catalog/bullet/bullet-hover-focus.svg');
       box-shadow: inset 0 0 0 2px var(--color-hover-2);
-      background-color: #D1A9F0;
     }
   }
+}
+
+.svg-icon {
+  width: inherit;
+  height: inherit;
 }
 
 .logo {

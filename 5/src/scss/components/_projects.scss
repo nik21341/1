@@ -38,7 +38,8 @@
   }
 
   &__tooltip {
-    display: inline-block;
+    display: inline-flex;
+    margin: 0 5px;
   }
 
   &__link {
@@ -112,29 +113,17 @@
   }
 
   &__button {
-    position: static;
     width: 30px;
     height: 30px;
 
-    &::before {
-      width: 7.07px;
-      height: 7.07px;
-    }
-
     &--prev {
       margin-right: 10px;
-
-      &::before {
-        border-color: transparent transparent var(--color-black) var(--color-black);
-      }
+      transform: rotate(90deg);
     }
 
     &--next {
       margin-left: 10px;
-
-      &::before {
-        border-color: var(--color-black) var(--color-black) transparent transparent;
-      }
+      transform: rotate(-90deg);
     }
 
     &--disabled {
@@ -192,12 +181,13 @@
     align-items: center;
     justify-content: center;
     padding: 10px;
-    transition: opacity 0.3s ease-in-out, filter 0.3s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out;
 
     & picture {
       opacity: .3;
       filter: grayscale(1);
       width: 50%;
+      transition: opacity 0.3s ease-in-out, filter 0.3s ease-in-out;
     }
 
     &--small {
